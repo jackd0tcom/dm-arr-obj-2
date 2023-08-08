@@ -53,7 +53,7 @@ var employees = [
 let employeeUpdater = () =>
   employees.filter((employee) => {
     if (employee.firstName === "Lorie") {
-      employee.department === "HR";
+      employee.department = "HR";
     }
     return employee.firstName !== "Theo";
   });
@@ -73,9 +73,11 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 let removeDuplicates = () => {
-  let boss = new Set(workplaceAccidents);
-  let workplaceAccidents = boss;
-  return workplaceAccidents;
+  workplaceAccidents.forEach((nums, i) => {
+    workplaceAccidents.forEach((nums, j) => {
+      workplaceAccidents.splice(j, 1);
+    });
+  });
 };
 
 ////////// PROBLEM 3 //////////
@@ -102,8 +104,8 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 ////////// PROBLEM 4 //////////
 
@@ -141,7 +143,12 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+const recordCleaner = () => {
+  myCar.accidents.map((obj) => {
+    obj.atFaultForAccident = false;
+    return obj;
+  });
+};
 
 ////////// PROBLEM 5 //////////
 
@@ -162,4 +169,11 @@ var numsArr = [
     4. Return the modified numsArr.
 */
 
-//Code Here
+const looper = function () {
+  return numsArr.map((arr) => {
+    arr.forEach((val, i) => {
+      arr[i] = val % 2 ? "odd" : "even";
+    });
+    return arr;
+  });
+};
