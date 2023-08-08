@@ -50,7 +50,13 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+
+let employeeUpdater = employees.filter((guy) => {
+  return employees.firstName !== 'Theo'
+}) 
+console.log(employeeUpdater) 
+
+
 
 ////////// PROBLEM 2 //////////
 
@@ -66,7 +72,11 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+let removeDuplicates = workplaceAccidents.map((el) => {
+  for (let el of workplaceAccidents){
+    
+  }
+})
 
 ////////// PROBLEM 3 //////////
 
