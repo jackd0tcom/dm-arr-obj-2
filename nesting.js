@@ -72,13 +72,15 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-let removeDuplicates = () => {
-  workplaceAccidents.forEach((nums, i) => {
-    workplaceAccidents.forEach((nums, j) => {
-      workplaceAccidents.splice(j, 1);
-    });
-  });
-};
+// let removeDuplicates = () => {
+//   workplaceAccidents.forEach((nums, i) => {
+//       for(let j = i+1; j <workplaceAccidents.length; j++){
+//       if()
+//       workplaceAccidents.splice(j, 1);
+//     });
+//   };
+
+const removeDuplicates = () => [...new Set(workplaceAccidents)];
 
 ////////// PROBLEM 3 //////////
 
